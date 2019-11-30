@@ -1,0 +1,77 @@
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_mixin.scss;
+
+*********************************/
+//RWD
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin phone-5s-width {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin LandScape {
+    @media screen and (orientation:landscape) {
+        @content;
+    }
+}
+
+@mixin Portrait {
+    @media screen and (orientation:portrait) {
+        @content;
+    }
+}
+
+@mixin border-radius00($radius) {
+    border-radius: $radius;
+}
+
+@mixin txt-color($color) {
+    color: $color;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+@mixin display-flex() {
+    display: flex;
+}
+
+@mixin flex_wrap() {
+    flex-wrap: wrap;
+}
+
+@mixin flex_column() {
+    flex-direction: column;
+}
+
+@mixin align_center() {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin align_start() {
+    justify-content: flex-start;
+    align-items: flex-start;
+}

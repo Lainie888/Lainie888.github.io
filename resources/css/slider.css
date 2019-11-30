@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-26;
+	Document:slider.scss; 
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_mixin.scss;
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_component.scss;
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_mixin.scss;
+
+*********************************/
+input:-webkit-autofill:hover, input:-webkit-autofill:active, input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(192, 192, 192, 0.2) inset !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  /*透明*/
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: #fff !important;
+}
+
+input {
+  outline: none;
+}
+
+::-ms-clear, ::-ms-reveal {
+  display: none;
+}
+
+.slier_box {
+  width: 364px;
+  height: 247px;
+  position: relative;
+}
+
+.slier_box .arrow_box {
+  position: relative;
+  z-index: 1061;
+}
+
+.slier_box .arrow_box .arrow_right {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #333;
+}
+
+.slier_box .arrow_box .arrow_left {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #333;
+}
+
+.slier_box .dot_group {
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  z-index: 1061;
+}
+
+.slier_box .dot_group_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.slier_box .dot_group_box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px 5px;
+}
+
+.slier_box .dot_group_box li a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #333;
+}

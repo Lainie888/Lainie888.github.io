@@ -1,0 +1,270 @@
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_component.scss;
+
+*********************************/
+@import "_mixin";
+
+@mixin container{
+    width: 100%;
+    max-width: 1140px;
+    padding-right:0;
+    padding-left:0;
+    margin: 0 auto;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        max-width: 100%;
+    }
+    // @include desktop{
+    //     max-width: 1140px;
+    // }
+}
+@mixin container-fluid{
+    width: 100%;
+    max-width: 100%;
+    padding-right:0;
+    padding-left:0;
+    margin: 0 auto;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        max-width: 100%;
+    }
+    // @include desktop{
+    //     max-width: 100%;
+    // }
+}
+@mixin row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right:0px;
+    margin-left:0px;
+}
+@mixin col{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right:0;
+    padding-left:0;
+}
+
+@mixin sm_5_equal{
+    @include mobile{
+        width: 20%;
+    }
+}
+
+@mixin iconfont{
+    font-family: "iconfont"!important;
+    @include font-size(16px);
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//btn start
+//@mixin btn{//之後待刪
+    // display: inline-block;
+    // font-weight: 400;
+    // text-align: center;
+    // white-space: nowrap;
+    // vertical-align: middle;
+    // user-select: none;
+    // border: 0;
+    // padding: .25rem 1rem;
+    // @include font-size(14px);
+    // line-height: 1.5;
+    // border-radius:.25rem;
+    // transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    // -webkit-appearance: button;
+    // cursor: pointer;
+    // &:focus, &:hover{
+    //     text-decoration: none; 
+    // }
+//}
+
+@mixin btn_sm{
+    padding: 2px 8px;
+}
+
+@mixin btn_Primary{
+    @include txt-color(#fff);
+    background: rgb(75,151,255);
+    background: linear-gradient(45deg,  rgb(75,151,255) 0%,rgb(51,121,255) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b97ff', endColorstr='#3379ff',GradientType=1 );
+    &:hover, &:active, &.active{
+        background: #3379ff;
+        background: linear-gradient(45deg, #3379ff 0%, #4b97ff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3379ff', endColorstr='#4b97ff',GradientType=1 );
+    }
+}
+@mixin btn_Primary_border{
+    @include txt-color(#fff);
+    border:1px solid rgb(75,151,255);
+    background: transparent;
+    &:hover, &:active, &.active{
+        background: #3379ff;
+        background: linear-gradient(45deg, #3379ff 0%, #4b97ff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3379ff', endColorstr='#4b97ff',GradientType=1 );
+    }
+}
+@mixin btn_Secondary{
+    @include txt-color(#fff);
+    background: rgb(253,207,7);
+    background: linear-gradient(135deg,  rgb(253,207,7) 0%,rgb(250,152,14) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdcf07', endColorstr='#fa980e',GradientType=1 ); 
+    &:hover, &:active, &.active{
+        background: rgb(250,152,14);
+        background: linear-gradient(45deg, rgb(250,152,14) 0%, rgb(253,207,7) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3379ff', endColorstr='#4b97ff',GradientType=1 );
+    }
+}
+@mixin btn_Secondary_border{
+    @include txt-color(#fff);
+    border:1px solid rgb(250,152,14);
+    background: transparent;
+    &:hover, &:active, &.active{
+        background: rgb(250,152,14);
+        background: linear-gradient(45deg, rgb(250,152,14) 0%, rgb(253,207,7) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3379ff', endColorstr='#4b97ff',GradientType=1 );
+    }
+}
+@mixin btn_Orange{
+    @include txt-color(#fff);
+    background:transparent;
+    border:1px solid #ea8d0a; 
+    &:hover, &:active, &.active{
+        background:#ea8d0a;
+    }
+}
+//btn end
+
+
+
+@mixin title{
+    // @include font-size(1em);
+    // border-left: 3px solid #58cafa;
+    // padding-left: 7px;
+    // font-weight: bold;
+}
+
+@mixin input_date{
+    width: 100%;
+    border: 0;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom, 50% calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    border-radius: 0;
+    font-weight: 400;
+    height: 36px;
+    @include font-size(.875em);
+    line-height: 1.428571429;
+    display: block;
+}
+
+@mixin img-fluid{//之後待刪
+    // max-width: 100%;
+    // height: auto;
+}
+@mixin img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+@mixin form_inline{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+@mixin form_group{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+@mixin label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+@mixin form_control{
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    @include font-size(1rem);
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+@mixin lineBox{
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #946c18, #fffad0, #946c18, #fffad0, #946c18);
+    z-index: 1024;
+}
+
+@mixin mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(1,1,1,.6);
+    display: none;
+    position: fixed;
+    z-index: 1033;
+}
+
+@mixin cs-skin-border{
+    border: 0;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom, 50% calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    border-radius: 0;
+    font-weight: 400;
+    padding: 7px 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    display: block;
+    color: #555;
+    border-bottom: 1px solid #bbb;
+}
+
+
+//input
+input:-webkit-autofill{
+    &:hover, &:active, &:focus{
+        -webkit-box-shadow: 0 0 0px 1000px rgba(192,192,192,0.2) inset!important;
+        transition: background-color 5000s ease-in-out 0s!important; /*透明*/
+    }
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background-color: #fff!important;
+}
+input{outline:none;}
+
+::-ms-clear,::-ms-reveal{display:none;}
+
+
+
+

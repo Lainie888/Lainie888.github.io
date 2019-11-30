@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-23;
+	Document:lightBox_all.scss; lightBox_all
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_mixin.scss;
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_component.scss;
+
+*********************************/
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:_mixin.scss;
+
+*********************************/
+input:-webkit-autofill:hover, input:-webkit-autofill:active, input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(192, 192, 192, 0.2) inset !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  /*透明*/
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: #fff !important;
+}
+
+input {
+  outline: none;
+}
+
+::-ms-clear, ::-ms-reveal {
+  display: none;
+}
+
+.lightBox {
+  display: none;
+  z-index: 1052;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  outline: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lightBox {
+    position: absolute;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox {
+    position: absolute;
+  }
+}
+
+.lightBox .lightBox_Group {
+  position: relative;
+  width: auto;
+  min-height: calc(100% - (.5rem * 2));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .lightBox .lightBox_Group {
+    max-width: 800px;
+    min-height: calc(100% - (1.75rem * 2));
+    margin: 1.75rem auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lightBox .lightBox_Group {
+    width: 90%;
+    min-height: calc(100% - (1.75rem * 2));
+    margin: 1.75rem auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox .lightBox_Group {
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+.lightBox .lightBox_Group .lightBox_content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+@media (min-width: 1200px) {
+  .lightBox .lightBox_Group .lightBox_content {
+    height: calc(100vh - (2.75rem * 2));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lightBox .lightBox_Group .lightBox_content {
+    height: calc(100% - (2.75rem * 2));
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox .lightBox_Group .lightBox_content {
+    height: 100%;
+  }
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: .5rem;
+  border-bottom: 0;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  -webkit-box-shadow: 0 6px 8px -9px #b1b1b1;
+          box-shadow: 0 6px 8px -9px #b1b1b1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  z-index: 9;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_header .lightBox_title {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  width: 100%;
+  font-weight: 500;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_header .lightBox_btn_closeGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  z-index: 9;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_header .lightBox_btn_closeGroup .btn_close {
+  padding: 1rem;
+  margin: -16px -9px -1rem auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_body {
+  position: relative;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: calc(100vh - 1.75rem * 2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  min-height: 150px;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_body h4 {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #585858;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_body h4 a {
+  display: inline;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_body h4 a:link, .lightBox .lightBox_Group .lightBox_content .lightBox_body h4 a:active, .lightBox .lightBox_Group .lightBox_content .lightBox_body h4 a:visited {
+  color: #4b97ff;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_body img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_body {
+    height: 550px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_body {
+    height: calc(100% - 160px);
+    overflow: scroll;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 7px 10px;
+  }
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  padding-top: 5px;
+  border-top: 0;
+  -webkit-box-shadow: 0 -4px 8px -6px #b1b1b1;
+          box-shadow: 0 -4px 8px -6px #b1b1b1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  z-index: 9;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_footer {
+    height: 70px;
+    padding: 0;
+  }
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid {
+    max-width: 100%;
+  }
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 0;
+  padding-top: 1rem;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close {
+  color: #fff;
+  background: #4b97ff;
+  background: linear-gradient(45deg, #4b97ff 0%, #3379ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b97ff', endColorstr='#3379ff',GradientType=1 );
+  color: #fff;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close:hover, .lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close:active, .lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close.active {
+  background: #3379ff;
+  background: linear-gradient(45deg, #3379ff 0%, #4b97ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3379ff', endColorstr='#4b97ff',GradientType=1 );
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close:hover {
+  -webkit-box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.375rem #3379ff;
+          box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.375rem #3379ff;
+  background: #3379ff;
+}
+
+.lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close:active, .lightBox .lightBox_Group .lightBox_content .lightBox_footer .container-fluid .row .btn_Group .button_close.active {
+  background-color: #3379ff;
+  -webkit-box-shadow: 0 0 0 0.1875rem #3379ff, 0 0 0 0.375rem #3379ff;
+          box-shadow: 0 0 0 0.1875rem #3379ff, 0 0 0 0.375rem #3379ff;
+  -webkit-transition-duration: 75ms;
+          transition-duration: 75ms;
+}
+
+.lightBox_02 {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .lightBox_Group_mid {
+    max-width: 500px !important;
+  }
+}

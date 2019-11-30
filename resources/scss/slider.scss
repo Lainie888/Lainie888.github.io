@@ -1,0 +1,65 @@
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-26;
+	Document:slider.scss; 
+
+*********************************/
+@import "_mixin";
+@import "_component";
+
+.slier_box{
+    width: 364px;
+    height: 247px;
+    position: relative;
+    .arrow_box{
+        position: relative;
+        z-index: 1061;
+        .arrow_right{
+            position: absolute;
+            top:50%;
+            right:5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #333;
+        }
+        .arrow_left{
+            position: absolute;
+            top:50%;
+            left:5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #333;
+        }
+    }
+    .dot_group{
+        display: none;
+        position: absolute;
+        width: 100%;
+        bottom: 5px;
+        z-index: 1061;
+        &_box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3px 5px;
+                a{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #fff;
+                    border: 1px solid #333;
+                }
+            }
+        }
+    }
+}

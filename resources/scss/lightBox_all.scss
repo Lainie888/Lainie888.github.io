@@ -1,0 +1,220 @@
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-23;
+	Document:lightBox_all.scss; lightBox_all
+
+*********************************/
+@import "_mixin";
+@import "_component";
+
+//lightBox normal
+.lightBox{
+    display: none;
+    z-index: 1052;
+    position: fixed;
+    @include tablet{
+        position: absolute;
+    }
+    @include mobile{
+        position: absolute;
+    }
+    top: 0;
+    right: 0;
+    bottom: 0;
+	left: 0;
+	//display: block;
+    overflow: hidden;
+    outline: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    .lightBox_Group{
+        position: relative;
+		width: auto;
+		min-height: calc(100% - (.5rem * 2));
+		display: flex;
+		align-items: flex-start;
+        pointer-events: none;
+		@include desktop{
+			max-width: 800px;
+			min-height: calc(100% - (1.75rem * 2));
+			margin: 1.75rem auto;
+		}
+		@include tablet{
+            width: 90%;
+			min-height: calc(100% - (1.75rem * 2));
+			margin: 1.75rem auto;
+        }
+        @include mobile{
+            height: 100%;
+            min-height: 100%;
+        }
+        .lightBox_content{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 5px solid rgba(255,255,255,0.2);
+            border-radius: .3rem;
+            outline: 0;
+            @include desktop{
+                height: calc(100vh - (2.75rem * 2));
+            }
+            @include tablet{
+                height: calc(100% - (2.75rem * 2));
+            }
+            @include mobile{
+                height: 100%;
+            }
+            .lightBox_header{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding: .5rem;
+                border-bottom: 0;
+                border-top-left-radius: .3rem;
+                border-top-right-radius: .3rem;
+                box-shadow: 0 6px 8px -9px #b1b1b1;
+                flex-shrink: 0;
+                z-index: 9;
+                .lightBox_title{
+                    text-align: center;
+                    font-size: 18px;
+                    color:#333;
+                    width: 100%;
+                    font-weight: 500;
+                }
+                .lightBox_btn_closeGroup{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    position: absolute;
+                    right: 0px;
+                    top: 4px;
+                    z-index: 9;
+                    .btn_close{
+                        padding: 1rem;
+                        margin: -16px -9px -1rem auto;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: 0;
+                        -webkit-appearance: none;
+                        float: right;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 1;
+                        text-shadow: 0 1px 0 #fff;
+                    }
+                }
+
+            }
+            .lightBox_body{
+                position: relative;
+                padding: 0;
+                flex-grow: 1;
+                max-height:calc(100vh - 1.75rem * 2);
+                overflow-y:auto;
+                overflow-x: hidden;
+                padding: 1rem;
+                min-height: 150px;
+                // margin-bottom : 1rem;
+                h4{
+                    width: 100%;
+                    text-align: left;
+                    font-size: 16px;
+                    color: #585858;
+                    display: inline-flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    //word-break: keep-all;
+                    a{
+                        display: inline;
+                       // word-break: keep-all;
+                        &:link, &:active, &:visited{
+                            color: #4b97ff;
+                        }
+                    }
+                }
+                img{
+                    max-width: 100%;
+                    height:auto;
+                }
+                @include desktop{
+                    flex-direction: column;
+                }
+                @include tablet{
+                    //max-height:calc(100% - 1.75rem * 2);
+                    height: 550px;
+                    overflow-x: scroll;
+                    overflow-y: scroll;
+                    flex-direction: column;
+                }
+                @include mobile{
+                    height: calc(100% - 160px);
+                    overflow: scroll;
+                    flex-direction: column;
+                    padding: 7px 10px;
+                }
+            }
+            .lightBox_footer{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 1rem;
+                padding-top: 5px;
+                border-top: 0;
+                box-shadow: 0 -4px 8px -6px #b1b1b1;
+                flex-shrink: 0;
+                z-index: 9;
+                @include mobile{
+                    height: 70px;
+                    padding: 0;
+                }
+                .container-fluid{
+                    @include container-fluid;
+                    .row{
+                        @include row;
+                        .btn_Group{
+                            @include col;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding-bottom: 0;
+                            padding-top: 1rem;
+                            .button_close{
+                                //@include btn;
+                                @include btn_Primary;
+                                color: #fff;
+                                &:hover{
+                                    box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.375rem #3379ff;
+                                    background: #3379ff;
+                                }
+                                &:active, &.active{
+                                    background-color: #3379ff;
+                                    box-shadow: 0 0 0 0.1875rem #3379ff, 0 0 0 0.375rem #3379ff;
+                                    transition-duration: 75ms;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lightBox_02{
+    display: none;
+}
+
+@include desktop{
+    .lightBox_Group_mid{
+        max-width: 500px!important;
+    }
+}

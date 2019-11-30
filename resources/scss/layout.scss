@@ -1,0 +1,129 @@
+/**********************************
+
+	Edit:Lainie;
+	Time:2019-11-17;
+	Document:layout.scss; 全站共用
+
+*********************************/
+@import "_mixin";
+@import "_component";
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+body {
+    @include font-size(16px);
+    font-family: "微軟正黑體";
+    background: #f5f4f4;
+    position:relative; 
+    line-height: 1.5;
+}
+html,body{
+	margin: 0; 
+    padding: 0;
+    height: 100%;
+	min-height: 100%;
+	-webkit-tap-highlight-color:transparent;
+}
+ul,ol,li{list-style: none;}
+ul,ol {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,dl,dd{
+	margin: 0;
+}
+a {display: block;}
+a:link {text-decoration: none;}
+:focus {outline: none;}
+.w-100{width:100%;}
+.clr{
+	clear: both;
+}
+
+img{
+	border: none;
+	vertical-align: top;
+}
+img[class^="img-fluid"]{
+    max-width: 100%;
+    height: auto;
+}
+div[class$="_template"]{
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+//button
+.btn, button[class^="button_close"]{
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 0;
+    padding: .25rem 1rem;
+    @include font-size(14px);
+    line-height: 1.5;
+    border-radius:.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: button;
+    cursor: pointer;
+    &:focus, &:hover{
+        text-decoration: none; 
+    }
+}
+button, input {
+	overflow: visible;
+}
+button, input, optgroup, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+select{
+	//-webkit-appearance:none;/* Safari 和 Chrome */
+}
+[type=reset], [type=submit], button, html [type=button] {
+	-webkit-appearance: button;
+}
+
+//框架
+.container-fluid{
+    width: 100%;
+    max-width: 100%;
+    padding-right:0;
+    padding-left:0;
+    margin: 0 auto;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        max-width: 100%;
+    }
+}
+.container{
+    width: 100%;
+    max-width: 1140px;
+    padding-right:0;
+    padding-left:0;
+    margin: 0 auto;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        max-width: 100%;
+    }
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right:0px;
+    margin-left:0px;
+}
