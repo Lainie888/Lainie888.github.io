@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" >    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <META NAME="ROBOTS" CONTENT="ALL">
+    <META NAME="ROBOTS" CONTENT="INDEX,NOFOLLOW">
+    <META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
+    <META NAME="ROBOTS" CONTENT="NONE">
+    <META NAME="GOOGLEBOT" CONTENT="NOARCHIVE">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <title>Lainie's portfolio</title>
+    <link rel="stylesheet" href="/resources/css/layout.css">
+    <link rel="stylesheet" href="/resources/css/index.css">
+    <link rel="stylesheet" href="/resources/css/lightBox_all.css">
+    <link rel="stylesheet" href="/resources/css/slider.css">
+    <link rel="stylesheet" href="/resources/css/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/resources/js/common.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        window.onload = function() {//一開始視窗在onload時 
+            
+            $("#Loading").fadeOut(2500); //執行id Loading，同時2.5秒後fadeOut
+        };
+    </script>
+
+    <div class="loading" id="Loading">
+        <img src="/resources/images/loading_cat.gif">
+    </div>
+
+    <div class="lightBox_ALL">
+    </div>
+
+    <div class="lainie-wrapper">
+        <div class="contentBox">
+            <div class="headerGroup">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="nav_group">
+                            <ul>
+                                <li><a class="web_design bounceInRight" href="javascript:;">Web Design</a></li>
+                                <li><a class="graphic_design bounceInRight" href="javascript:;">Graphic Design</a></li>
+                                <li><a class="creative_design bounceInRight" href="javascript:;">Creative Design</a></li>
+                                <li><a class="other bounceInRight" href="javascript:;">Other</a></li>
+                            </ul>
+                        </div>
+                        <button class="navbar_toggler" type="button"><!--漢堡選單-->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="mobile_nav_group">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="triangle_group">
+                                        <span class="triangle_box"></span>
+                                    </div>
+                                    <ul class="mobile_nav_box">
+                                        <li><a class="web_design" href="javascript:;">Web Design</a></li>
+                                        <li><a class="graphic_design" href="javascript:;">Graphic Design</a></li>
+                                        <li><a class="creative_design" href="javascript:;">Creative Design</a></li>
+                                        <li><a class="other" href="javascript:;">Other</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="contentGroup">
+                <div id="mainContent" class="main_Content">
+                </div>
+            </div>
+            
+            <div class="footerGroup"></div>
+        </div>
+    </div>
+
+<script>
+
+    $(function(){   
+        $(window).scroll(function () {
+            var scrollVal = $(this).scrollTop();
+            //var adscrtop=$(".nav_group ul").offset().top;
+            if(scrollVal > 100){
+                $(".nav_group").css({"position": "fixed","top": "0px"});
+                $(".nav_group ul").addClass("bg_black");          
+            }else{
+                $(".nav_group ul").removeClass("bg_black");
+            }
+        });
+
+        
+    });
+
+    $(function(){
+        getPageView("lightBox_main_Content.html", ".lightBox_ALL");
+        getPageView("main.html", ".main_Content");
+    })
+</script>
+</body>
+</html>
